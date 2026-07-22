@@ -16,4 +16,14 @@ function getComputerChoice(){
         return "Something went wrong";
     }
 }
-console.log(getComputerChoice());
+
+//Get Human choice
+function getHumanChoice(){
+    //Ask the user for an input
+    let humanChoice = prompt("Enter your choice: rock, paper or scissors");
+    return humanChoice;
+}
+
+//Testing
+//console.log("Human choice: " + getHumanChoice());
+console.log("Computer choice: " + getComputerChoice());
