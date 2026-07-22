@@ -29,6 +29,7 @@ function getHumanChoice(){
 }
 
 //play a single round
+//Check the inputs - who wins - log and increment score
 function playRound(humanChoice, computerChoice){
     if(humanChoice === computerChoice){
         console.log(`It's a draw, you both picked ${humanChoice}`);
