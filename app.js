@@ -1,8 +1,7 @@
-//Get the computer choice - random choice
 function getComputerChoice(){
     //Generate a random number from 1 - 3
     let randomNumber = Math.floor(Math.random() *3) + 1;
-    //return the chice of computer in a string depending on the random number
+    //return the choice of computer in a string depending on the random number
     if(randomNumber === 1){
         return "rock";
     }
@@ -17,17 +16,13 @@ function getComputerChoice(){
     }
 }
 
-//Get Human choice
 function getHumanChoice(){
-    //Ask the user for an input
+    //Ask the user for an input - reform to all lowercase
     let humanChoice = prompt("Enter your choice: rock, paper or scissors");
     humanChoice = humanChoice.toLowerCase();
     return humanChoice;
 }
 
-
-
-//play a game of 5 rounds:
 function playGame(){
     let humanScore = 0;
     let computerScore = 0;
@@ -51,7 +46,7 @@ function playGame(){
         }
     }
 
-    //Play the game using a loop so that we dont repeat ourselfs
+    //Play the game using a loop (5 rounds) so that we dont repeat ourselfs
     for(let i = 0; i < 5; i++){
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
@@ -59,36 +54,6 @@ function playGame(){
         playRound(humanSelection, computerSelection);
         console.log(`Score: Human: ${humanScore} VS Computer: ${computerScore}`);
     }
-
-    //Belof is the original code, when we could not use a loop to play the game.
-
-    /*
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(`Score: Human: ${humanScore} VS Computer: ${computerScore}`);
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(`Score: Human: ${humanScore} VS Computer: ${computerScore}`);
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(`Score: Human: ${humanScore} VS Computer: ${computerScore}`);
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(`Score: Human: ${humanScore} VS Computer: ${computerScore}`);
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(`Score: Human: ${humanScore} VS Computer: ${computerScore}`);
-    */
 }
 
-//Testing
-//console.log("Human choice: " + getHumanChoice());
-//console.log("Computer choice: " + getComputerChoice());
-
-//call the playGame() function
 playGame();
