@@ -46,14 +46,16 @@ function playGame(){
         }
     }
 
-    //Play the game using a loop (5 rounds) so that we dont repeat ourselfs
-    for(let i = 0; i < 5; i++){
-        let humanSelection = getHumanChoice();
-        let computerSelection = getComputerChoice();
+    //For part 2 of the excercise we had to delete the part of the code that plays exactly 5 times. Commenting this piece of the code out.
 
-        playRound(humanSelection, computerSelection);
-        console.log(`Score: Human: ${humanScore} VS Computer: ${computerScore}`);
-    }
+    //Play the game using a loop (5 rounds) so that we dont repeat ourselfs
+    // for(let i = 0; i < 5; i++){
+    //     let humanSelection = getHumanChoice();
+    //     let computerSelection = getComputerChoice();
+
+    //     playRound(humanSelection, computerSelection);
+    //     console.log(`Score: Human: ${humanScore} VS Computer: ${computerScore}`);
+    // }
 }
 
 playGame();
