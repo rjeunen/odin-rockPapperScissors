@@ -52,13 +52,6 @@ function getComputerChoice(){
     }
 }
 
-// function getHumanChoice(){
-//     //Ask the user for an input - reform to all lowercase
-//     let humanChoice = prompt("Enter your choice: rock, paper or scissors");
-//     humanChoice = humanChoice.toLowerCase();
-//     return humanChoice;
-// }
-
 function playRound(humanChoice, computerChoice){
     if(humanChoice === computerChoice){
         const result = document.createElement("p");
@@ -115,43 +108,6 @@ function playRound(humanChoice, computerChoice){
         checkScore();
     }
 }
-
-//For part 2 of the excercise we had to delete the part of the code that plays exactly 5 times. Commenting this piece of the code out.
-
-// function playGame(){
-//     let humanScore = 0;
-//     let computerScore = 0;
-
-//     //play a single round
-//     //Check the inputs - who wins - log and increment score
-//     function playRound(humanChoice, computerChoice){
-//         if(humanChoice === computerChoice){
-//             console.log(`It's a draw, you both picked ${humanChoice}`);
-//         }
-//         else if(humanChoice === "rock" && computerChoice === "scissors" ||
-//             humanChoice === "paper" && computerChoice === "rock" ||
-//             humanChoice === "scissors" && computerChoice === "rock"
-//         ){
-//             console.log(`You win, ${humanChoice} beats ${computerChoice}`);
-//             humanScore++;
-//         }
-//         else{
-//             console.log(`You lose, ${computerChoice} beats ${humanChoice}`);
-//             computerScore++;
-//         }
-//     }
-
-//     //Play the game using a loop (5 rounds) so that we dont repeat ourselfs
-//     for(let i = 0; i < 5; i++){
-//         let humanSelection = getHumanChoice();
-//         let computerSelection = getComputerChoice();
-
-//         playRound(humanSelection, computerSelection);
-//         console.log(`Score: Human: ${humanScore} VS Computer: ${computerScore}`);
-//     }
-// }
-
-//playGame();
 
 //event listeners
 rockButton.addEventListener("click", () => {
