@@ -2,6 +2,7 @@
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
+const scoreboard = document.querySelector("#score");
 
 function getComputerChoice(){
     //Generate a random number from 1 - 3
@@ -30,17 +31,25 @@ function getHumanChoice(){
 
 function playRound(humanChoice, computerChoice){
     if(humanChoice === computerChoice){
-        console.log(`It's a draw, you both picked ${humanChoice}`);
+        const result = document.createElement("p");
+        result.textContent = `It's a draw, you both picked ${humanChoice}`;
+        scoreboard.appendChild(result);
     }
     else if(humanChoice === "rock" && computerChoice === "scissors" ||
         humanChoice === "paper" && computerChoice === "rock" ||
         humanChoice === "scissors" && computerChoice === "rock"
     ){
-        console.log(`You win, ${humanChoice} beats ${computerChoice}`);
+        const result = document.createElement("p");
+        result.textContent = `You win, ${humanChoice} beats ${computerChoice}`;
+        scoreboard.appendChild(result);
+
         humanScore++;
     }
     else{
-        console.log(`You lose, ${computerChoice} beats ${humanChoice}`);
+        const result = document.createElement("p");
+        result.textContent = `You lose, ${computerChoice} beats ${humanChoice}`;
+        scoreboard.appendChild(result);
+
         computerScore++;
     }
 }
